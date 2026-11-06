@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasir Uddin | Portfolio & Workflow</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#8B5CF6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 font-sans">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo with Name and Subtitle -->
+            <a href="#" class="flex flex-col group">
+                <span class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent group-hover:opacity-90 transition-opacity">
+                    Nasir Uddin<span class="text-primary">.</span>
+                </span>
+                <span class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 -mt-1">
+                    Workflow Site
+                </span>
+            </a>
+
+            <!-- Desktop Menu with Individual Small Compact Boxes -->
+            <nav class="hidden md:flex items-center space-x-2 text-xs font-semibold">
+                <a href="#home" class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-primary hover:text-primary dark:hover:text-primary hover:shadow-sm transition-all duration-200">Home</a>
+                <a href="#about" class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-primary hover:text-primary dark:hover:text-primary hover:shadow-sm transition-all duration-200">About Me</a>
+                <a href="#experience" class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-primary hover:text-primary dark:hover:text-primary hover:shadow-sm transition-all duration-200">Experience</a>
+                <a href="#skills" class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-primary hover:text-primary dark:hover:text-primary hover:shadow-sm transition-all duration-200">Skills & Education</a>
+                <a href="#contact" class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-primary hover:text-primary dark:hover:text-primary hover:shadow-sm transition-all duration-200">Contact</a>
+            </nav>
+
+            <!-- Actions (Theme Toggle & Mobile Menu Button) -->
+            <div class="flex items-center space-x-3">
+                <button id="themeToggle" class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:ring-2 hover:ring-primary/50 transition-all" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-yellow-400 text-lg"></i>
+                </button>
+                
+                <!-- Mobile menu button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 focus:outline-none" aria-label="Open Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800 px-4 pt-3 pb-5 space-y-2">
+            <a href="#home" class="block px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-gray-800/60 font-medium hover:text-primary transition-all">Home</a>
+            <a href="#about" class="block px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-gray-800/60 font-medium hover:text-primary transition-all">About Me</a>
+            <a href="#experience" class="block px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-gray-800/60 font-medium hover:text-primary transition-all">Experience</a>
+            <a href="#skills" class="block px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-gray-800/60 font-medium hover:text-primary transition-all">Skills & Education</a>
+            <a href="#contact" class="block px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-gray-800/60 font-medium hover:text-primary transition-all">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[calc(100vh-5rem)] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center md:text-left">
+                    <span class="inline-block px-4 py-1.5 bg-blue-100 dark:bg-blue-900/40 text-primary rounded-full text-sm font-semibold tracking-wide border border-blue-200 dark:border-blue-800">
+                        Power Engineer | Junior Associate (Data & Operations)
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+                        Hi, I'm <br>
+                        <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Nasir Uddin</span>
+                    </h1>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg max-w-lg mx-auto md:mx-0 leading-relaxed">
+                        Performance-driven Power Engineering professional with expertise in data operations, process optimization, and technical maintenance. Currently driving data accuracy at <strong>LEVERnGEAR Limited</strong>.
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        <span><i class="fa-solid fa-location-dot text-primary mr-1"></i> Nadda, Vatara, Dhaka, Bangladesh</span>
+                        <span><i class="fa-solid fa-phone text-primary mr-1"></i> +880 1706 138843</span>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
+                        <a href="#experience" class="px-6 py-3 bg-primary hover:bg-blue-600 text-white font-medium rounded-xl shadow-lg shadow-blue-500/30 transition-all">
+                            View Experience
+                        </a>
+                        <a href="#contact" class="px-6 py-3 border border-gray-300 dark:border-gray-700 hover:border-primary font-medium rounded-xl transition-all">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Profile Image Section -->
+                <div class="flex justify-center">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full p-2.5 bg-gradient-to-tr from-primary via-purple-500 to-secondary shadow-2xl">
+                        <div class="w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-800 flex items-center justify-center relative">
+                            <!-- High Quality Vector Professional Avatar Fallback -->
+                            <svg class="w-full h-full object-cover text-gray-400 dark:text-gray-600" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                            </svg>
+                            
+                            <!-- Profile Photo Overlay -->
+                            <img id="userAvatar" src="https://i.ibb.co/Z6jfxKtC/Chat-GPT-Image-Apr-9-2026-11-51-07-PM.png" 
+                                 alt="Nasir Uddin Profile Photo" 
+                                 class="absolute inset-0 w-full h-full object-cover rounded-full"
+                                 onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/nasirbhaiyas';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-gray-100/60 dark:bg-gray-800/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold mb-4">Professional Summary</h2>
+                    <div class="w-16 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                        Performance-driven Power Engineering professional with expertise in data operations, process optimization, and technical maintenance. Proven ability to manage large-scale datasets with 100% accuracy at LEVERnGEAR Limited. Skilled at combining engineering principles with data-driven decision-making to enhance operational efficiency and team productivity.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature Card 1 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center hover:shadow-md transition-shadow">
+                        <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-primary rounded-xl flex items-center justify-center mx-auto mb-4 text-2xl">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Data Operations</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Managing & validating complex datasets with 100% precision and utilizing CRM tools effectively.</p>
+                    </div>
+
+                    <!-- Feature Card 2 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center hover:shadow-md transition-shadow">
+                        <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 text-secondary rounded-xl flex items-center justify-center mx-auto mb-4 text-2xl">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Power Engineering</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Strong background in power system maintenance, mechanical/electrical checks, & AutoCAD.</p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center hover:shadow-md transition-shadow">
+                        <div class="w-14 h-14 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-xl flex items-center justify-center mx-auto mb-4 text-2xl">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Process & QA</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Preparing analytical reports, executing QA protocols, and optimizing team workflow standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section id="experience" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold mb-4">Professional Experience</h2>
+                    <div class="w-16 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <!-- Job 1 -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 relative">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Junior Associate (Data & Operations)</h3>
+                                <p class="text-primary font-semibold">LEVERnGEAR Limited | Dhaka, Bangladesh</p>
+                            </div>
+                            <span class="inline-block mt-2 md:mt-0 px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-primary text-sm font-semibold rounded-lg">
+                                2023 - Present
+                            </span>
+                        </div>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                            <li>Manage and validate complex datasets ensuring zero-error accuracy for international projects.</li>
+                            <li>Execute quality control protocols and utilize CRM tools to streamline internal workflows.</li>
+                            <li>Prepare analytical operational reports to support management in data-driven decisions.</li>
+                            <li>Collaborate with cross-functional teams to improve documentation and process standards.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Accountant - Wood Shop</h3>
+                                <p class="text-secondary font-semibold">Narayanganj, Bangladesh</p>
+                            </div>
+                            <span class="inline-block mt-2 md:mt-0 px-3 py-1 bg-purple-100 dark:bg-purple-900/40 text-secondary text-sm font-semibold rounded-lg">
+                                2022 - 2023
+                            </span>
+                        </div>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                            <li>Maintained accurate ledger records and managed daily cash-flow operations.</li>
+                            <li>Improved inventory tracking systems to reduce discrepancies and support procurement.</li>
+                            <li>Assisted in preparing financial summaries and operational documentation.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Intern Engineer</h3>
+                                <p class="text-green-500 font-semibold">Government Transport Pool & Repair Center | Dhaka, Bangladesh</p>
+                            </div>
+                            <span class="inline-block mt-2 md:mt-0 px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 text-sm font-semibold rounded-lg">
+                                2021 - 2022
+                            </span>
+                        </div>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                            <li>Assisted in overhauling heavy vehicle engines and performing system diagnostics.</li>
+                            <li>Conducted mechanical and electrical system checks to ensure operational safety.</li>
+                            <li>Supported maintenance teams with repair documentation and quality assurance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Education Section -->
+        <section id="skills" class="py-20 bg-gray-100/60 dark:bg-gray-800/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Core Competencies / Skills -->
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">Core Competencies</h2>
+                        <div class="w-16 h-1 bg-primary rounded-full mb-8"></div>
+
+                        <div class="space-y-6">
+                            <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                                <h4 class="font-bold text-lg mb-3 text-primary"><i class="fa-solid fa-code mr-2"></i> Web Development</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg"><i class="fa-brands fa-html5 text-orange-500 mr-1"></i> HTML5</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg"><i class="fa-brands fa-css3-alt text-blue-500 mr-1"></i> CSS3</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg"><i class="fa-brands fa-js text-yellow-500 mr-1"></i> JavaScript</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                                <h4 class="font-bold text-lg mb-3 text-secondary"><i class="fa-solid fa-microchip mr-2"></i> Technical & Engineering</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg">Power System Maintenance</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg">Engine Diagnostics</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg">AutoCAD</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg">QA Testing</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                                <h4 class="font-bold text-lg mb-3 text-purple-500"><i class="fa-solid fa-table mr-2"></i> Data & CRM Tools</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg">Advanced MS Excel</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg">Google Sheets</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg">CRM Platforms</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg">Data Verification</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg">Database Systems</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                                <h4 class="font-bold text-lg mb-3 text-green-500"><i class="fa-solid fa-language mr-2"></i> Languages</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg">Bengali (Native)</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg">English (Professional)</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg font-semibold text-primary"><i class="fa-solid fa-torii-gate mr-1"></i> Japanese (N5 Level Completed)</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-lg">Hindi/Urdu (Conversational)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">Education</h2>
+                        <div class="w-16 h-1 bg-primary rounded-full mb-8"></div>
+
+                        <div class="space-y-6">
+                            <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                                <span class="text-xs font-semibold px-2.5 py-1 bg-blue-100 dark:bg-blue-900/40 text-primary rounded-md">2017 - 2021</span>
+                                <h3 class="text-xl font-bold mt-2">Diploma in Power Engineering</h3>
+                                <p class="text-gray-600 dark:text-gray-400 font-medium">Feni Polytechnic Institute</p>
+                                <p class="text-sm font-semibold text-primary mt-1">CGPA: 3.29 / 4.00</p>
+                            </div>
+
+                            <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                                <span class="text-xs font-semibold px-2.5 py-1 bg-purple-100 dark:bg-purple-900/40 text-secondary rounded-md">2015 - 2017</span>
+                                <h3 class="text-xl font-bold mt-2">SSC (Vocational) Electrical</h3>
+                                <p class="text-gray-600 dark:text-gray-400 font-medium">Al Zulfiqur Engineering Institute</p>
+                                <p class="text-sm font-semibold text-secondary mt-1">GPA: 4.39 / 5.00</p>
+                            </div>
+
+                            <!-- Professional References Card -->
+                            <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                                <h4 class="font-bold text-lg mb-3 text-gray-900 dark:text-white"><i class="fa-solid fa-user-check mr-2 text-primary"></i> Professional References</h4>
+                                <div class="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+                                    <div class="border-b border-gray-100 dark:border-gray-800 pb-2">
+                                        <p class="font-bold text-gray-800 dark:text-gray-200">Md. Razo Siddique</p>
+                                        <p class="text-xs">Deputy Manager, Operations | LEVERnGEAR Limited</p>
+                                        <p class="text-xs"><i class="fa-solid fa-envelope mr-1"></i> razo@leverngear.com | <i class="fa-solid fa-phone mr-1"></i> +880 1676 178116</p>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-gray-800 dark:text-gray-200">Md. Habibur Rahman</p>
+                                        <p class="text-xs">Proprietor, Computer Corner - SKS Shopping Complex</p>
+                                        <p class="text-xs"><i class="fa-solid fa-envelope mr-1"></i> habib1994r@gmail.com | <i class="fa-solid fa-phone mr-1"></i> +88 01915 353969</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+                    <div class="w-16 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+                    <p class="text-gray-600 dark:text-gray-300">Have an inquiry or opportunity? Feel free to reach out directly or send a message!</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Direct Contact Details -->
+                    <div class="space-y-4 md:col-span-1">
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700">
+                            <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 text-primary rounded-lg flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <h4 class="font-bold">Email</h4>
+                            <p class="text-xs text-gray-600 dark:text-gray-400 break-all">nasirhossain11198@gmail.com</p>
+                        </div>
+
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700">
+                            <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 text-secondary rounded-lg flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <h4 class="font-bold">Phone</h4>
+                            <p class="text-xs text-gray-600 dark:text-gray-400">+880 1706 138843</p>
+                        </div>
+
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700">
+                            <div class="w-10 h-10 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-lg flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <h4 class="font-bold">Present Address</h4>
+                            <p class="text-xs text-gray-600 dark:text-gray-400">Nadda, Vatara, Dhaka-1212, Bangladesh</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="md:col-span-2 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Your Name</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="Enter your full name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email Address</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="example@gmail.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Message</label>
+                                <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="Write your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3 bg-primary hover:bg-blue-600 text-white font-medium rounded-xl shadow-md shadow-blue-500/20 transition-all">
+                                Send Message
+                            </button>
+                        </form>
+                        <!-- Custom Success Toast Message -->
+                        <div id="toastMessage" class="hidden mt-4 p-4 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-xl text-center font-medium">
+                            Your message has been sent successfully! Thank you.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/nasir-uddin43" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-primary transition-colors" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://github.com/nasirbhaiyas" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-primary transition-colors" aria-label="GitHub">
+                    <i class="fa-brands fa-github text-2xl"></i>
+                </a>
+                <a href="https://www.facebook.com/hossainnasir43" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-primary transition-colors" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook text-2xl"></i>
+                </a>
+                <a href="https://x.com/hossainnasir43" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-primary transition-colors" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2026 Nasir Uddin | Power Engineer & Junior Associate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Dark / Light Theme Toggle Functionality
+        const themeToggleBtn = document.getElementById('themeToggle');
+        
+        // Default to Light Mode unless explicit dark theme preference is saved
+        if (localStorage.theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Contact Form Submission Simulation
+        const contactForm = document.getElementById('contactForm');
+        const toastMessage = document.getElementById('toastMessage');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            toastMessage.classList.remove('hidden');
+            contactForm.reset();
+
+            setTimeout(() => {
+                toastMessage.classList.add('hidden');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
